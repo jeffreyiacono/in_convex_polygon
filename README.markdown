@@ -19,6 +19,8 @@ The function uses the _"to the right rule"_ to determine if the point is inside 
 _Please feel free push any code that implements the following - patches will be happily
 accepted_
 
+* Better naming for topMostX, topMostY, etc. as a single point could be both;
+  current naming could be viewed as confusing in a situation like this.
 * Generalize #inConvexPolygon to handle an n-sided convex polygon; current
   implementation handles a 4-sided convex polygon only (this was my use case)
 
