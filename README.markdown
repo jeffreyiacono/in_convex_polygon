@@ -1,9 +1,14 @@
 ## inConvexPolygon ##
-`inConvexPolygon` takes a point (_PointX_, _PointY_) along with four other points (_topMostX_, _topMostY_), (_rightMostX_, _rightMostY_), (_bottomMostX_, _bottomMostY_), and (_leftMostX_, _leftMostY_) that define a convex polygon and returns `true` if the passed point is within the polygon's area, `false` if not. A picture is worth a thousand words:
+`inConvexPolygon` takes a point (_PointX_, _PointY_) along with four other points (_topMostX_, _topMostY_), (_rightMostX_, _rightMostY_), (_bottomMostX_, _bottomMostY_), and (_leftMostX_, _leftMostY_) that define a convex polygon and returns `true` if the passed point is within the polygon's area, `false` if not.
+
+A picture is worth a thousand words:
 
 ![Points within convex polygon](https://lh4.googleusercontent.com/-PZT7LOt01UI/Tm1IckHofhI/AAAAAAAAAaI/s7qLunE0BMY/points-in-polygon.png)
 
 _red points found by using `inConvexPolygon` function - sample app can be downloaded at sample/in\_convex\_polygon.xlsm_
+
+A quick note on polygon points: it is possible that a polygon can have a point that can be both the left most and the top most (or the left most and the bottom most, etc.).
+In a situation such as this, just remember to pick a starting point and then assign the remaining points based on clockwise traversal of the polygon's sides.
 
 ## Basic Usage ##
 Import __modules/convex\_polygon.bas__ module into any new or existing MS Excel workbook. You can then use `inConvexPolygon` to determine if any point is within an arbitrary 4-sided convex polygon.
